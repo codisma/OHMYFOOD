@@ -13,11 +13,11 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: auto;
   background-color: rgb(248, 248, 248);
   height: auto;
-  max-width: 1350px;
+  max-width: 1200px;
 }
 html {
   scroll-behavior: smooth;
@@ -146,8 +146,9 @@ a {
 /*----------------------------------------start fonction sec*/
 .fonction {
   margin-top: 45px;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-bottom: 45px;
+  margin-right: 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -156,12 +157,16 @@ a {
 @media (min-width: 767px) {
   .fonction {
     height: 250px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
 @media (min-width: 992px) {
   .fonction {
     height: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -177,16 +182,15 @@ a {
 .fonction .fonction-list {
   display: flex;
   justify-content: space-between;
-  margin-left: 15px;
+  align-items: center;
   flex-direction: column;
-  height: 85%;
-  margin: auto;
+  width: 100%;
 }
 @media (min-width: 767px) {
   .fonction .fonction-list {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 97%;
+    width:100%;
   }
 }
 @media (min-width: 992px) {
@@ -202,10 +206,24 @@ a {
   align-items: center;
   flex-direction: row;
   background-color: rgb(237, 234, 234);
-  border-radius: 20px;
-  height: 80px;
-  width: 310px;
+  border-radius: 47px;
+  width: 97%;
+  margin-bottom: 15px;
   position: relative;
+}
+@media (min-width: 767px) {
+  .fonction .fonction-list .fonct-1  {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .fonction .fonction-list .fonct-1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30%;
+  }
 }
 .fonction .fonct-1 > i:first-child {
   display: flex;
@@ -242,12 +260,26 @@ a {
   align-items: center;
   flex-direction: row;
   background-color: rgb(237, 234, 234);
-  border-radius: 20px;
-  height: 80px;
-  width: 310px;
+  border-radius: 47px;
+  width: 97%;
+  margin-bottom: 15px;
   position: relative;
   background-color:  #eee4f9;
   ;
+}
+@media (min-width: 767px) {
+  .fonction .fonction-list .fonct-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .fonction .fonction-list .fonct-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:30%;
+  }
 }
 .fonction .fonct-2 > i:first-child {
   display: flex;
@@ -744,11 +776,10 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   .footer-section {
     flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -760,15 +791,16 @@ a {
 .footer-section .footer-list {
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: column;
-  width: 50%;
+  width: 27%;
   height: 120px;
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   .footer-section .footer-list {
     flex-direction: row;
     align-items: center;
+    width: 70%;
   }
 }
 .footer-section .footer-list .proposer {
@@ -777,9 +809,10 @@ a {
   align-items: center;
 }
 .footer-section .footer-list .proposer p {
-  width: 87%;
+  margin-left: 6px;
   font-size: 15px;
 }
+
 .footer-section .footer-list .partenaire {
   display: flex;
   justify-content: space-between;
@@ -789,7 +822,13 @@ a {
   width: 87%;
   font-size: 15px;
 }
-
+.footer-section .footer-list .contact {
+  font-size: 15px;
+  
+}
+.footer-section .footer-list .contact a{
+  color: white
+}
 /*------------------------ start-resto-1-------*/
 /*start-main---------*/
 .resto-image img {
@@ -860,17 +899,20 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  width: 100%;
 }
 @media (min-width: 767px) {
   .resto-menu {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%
   }
 }
 @media (min-width: 992px) {
   .resto-menu {
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
   }
 }
 .resto-menu .entrées-menu {
@@ -879,8 +921,21 @@ a {
   align-items: flex-start;
   flex-direction: column;
   height: 25%;
+  width: 100%;
+  
 }
-
+@media (min-width: 767px) {
+  .resto-menu .entrées-menu {
+    flex-wrap: wrap;
+    width: 50%
+  }
+}
+@media (min-width: 992px) {
+  .resto-menu .entrées-menu {
+    flex-wrap: nowrap;
+    width: 33%;
+  }
+}
 .entrées-menu .entrées p {
   font-weight: 300;
 }
@@ -890,7 +945,7 @@ a {
   width: 54px;
   height: 3px;
   background-color: var(--tertiaire-color);
-  transition: var(--tertiaire-color);
+  transition: var(--main-transition);
   margin-top: 18px;
 }
 .entrées-menu .entrées-list {
@@ -901,9 +956,10 @@ a {
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
+  margin:auto;
 }
 
-.list-1 {
+.entrées-list .list-1 {
   background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
@@ -916,6 +972,12 @@ a {
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 97%;
+}
+@media (min-width: 767px){
+  .entrées-list .list-1  {
+    width: 80%;
+  }
 }
 .list-1 .caption {
   display: flex;
@@ -929,7 +991,7 @@ a {
 
 .list-1 .caption h3 {
   margin: 2px;
-  margin-left: 5px;
+  margin-left: 13px;
   margin-top: 7px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -949,7 +1011,7 @@ a {
   text-overflow: ellipsis;
   font-weight: 300;
   margin: 2px;
-  margin-left: 10px;
+  margin-left: 16px;
 }
 .list-1 .discription-pris .pris p {
   font-weight: bold;
@@ -993,33 +1055,52 @@ a {
     transform : rotate(360deg)
   }
 }
-.plats-menu {
+.resto-menu .plats-menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   height: 25%;
+  width: 100%;
+  
 }
-.plats-menu .plats p {
+@media (min-width: 767px) {
+  .resto-menu .plats-menu {
+    flex-wrap: wrap;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .resto-menu .plats-menu {
+    flex-wrap: nowrap;
+    width: 33%;
+  }
+}
+.resto-menu .plats-menu .plats p {
   font-weight: 300;
 }
 
-.plats-menu .plats::before {
+.resto-menu .plats-menu .plats::before {
   content: "";
   position: absolute;
   width: 35px;
   height: 3px;
   background-color: var(--tertiaire-color);
-  transition: var(--tertiaire-color);
+  transition: var(--main-transition);
   margin-top: 20px;
 }
-.plats-menu .plats-list {
+.resto-menu .plats-menu .plats-list {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  margin:auto;
 }
-.plats-menu .plats-list .list-1 {
+
+.resto-menu .plats-menu .plats-list .list-1 {
   background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
@@ -1032,8 +1113,14 @@ a {
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 97%;
 }
-.plats-menu .list-1 .caption {
+@media (min-width: 767px){
+  .resto-menu .plats-menu .plats-list .list-1  {
+    width: 80%;
+  }
+}
+.resto-menuv .plats-menu .list-1 .caption {
   display: flex;
   flex: 100%;
   white-space: nowrap;
@@ -1043,58 +1130,54 @@ a {
   transition: all 700ms;
 }
 
-.plats-menu .caption h3 {
-  margin: 2px;
-  margin-left: 5px;
-  margin-top: 7px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding: 4px;
-}
-.plats-menu .caption p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-weight: 300;
-}
 
-.Desserts-menu {
+
+
+.resto-menu .Desserts-menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   height: 25%;
+
 }
 @media (min-width: 787px) {
-  .Desserts-menu {
-    margin: auto;
+  .resto-menu .Desserts-menu {
+    margin-left: 250px;
+    width: 50%;
   }
 }
-@media (min-width: 1000px) {
-  .Desserts-menu {
+@media (min-width: 992px) {
+  .resto-menu .Desserts-menu {
     margin: 0px;
+    flex-wrap: nowrap;
+    width: 33%;;
   }
 }
-.Desserts-menu .Desserts p {
+.resto-menu .Desserts-menu .Desserts p {
   font-weight: 300;
 }
-.Desserts-menu .Desserts::before {
+.resto-menu .Desserts-menu .Desserts::before {
   content: "";
   position: absolute;
   width: 54px;
   height: 3px;
   background-color: var(--tertiaire-color);
-  transition: var(--tertiaire-color);
+  transition: var(--main-transition);
   margin-top: 20px;
 }
-.Desserts-menu .Desserts-list {
+.resto-menu .Desserts-menu .Desserts-list {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  margin:auto;
 }
-.Desserts-menu .Desserts-list .list-1 {
+
+.resto-menu .Desserts-menu .Desserts-list .list-1 {
   background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
@@ -1107,8 +1190,14 @@ a {
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 97%
 }
-.Desserts-menu .Desserts-list .caption {
+@media (min-width: 767px){
+  .resto-menu .Desserts-menu .Desserts-list .list-1  {
+    width: 80%;
+  }
+}
+.resto-menu .Desserts-menu .Desserts-list .caption {
   display: flex;
   flex: 100%;
   white-space: nowrap;
@@ -1118,21 +1207,7 @@ a {
   transition: all 700ms;
 }
 
-.Desserts-menu .caption h3 {
-  margin: 2px;
-  margin-left: 5px;
-  margin-top: 7px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding: 4px;
-}
-.Desserts-menu .caption p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-weight: 300;
-}
+
 
 .explore-1 {
   display: flex;
@@ -1180,7 +1255,7 @@ footer {
 }
 @keyframes opacity {
   from {
-    opacity: 0;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -1188,7 +1263,7 @@ footer {
 }
 .entrées-menu .entrées-list .list-1{
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: backwards;
     animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
@@ -1206,7 +1281,7 @@ footer {
 }
 .plats-menu .plats-list .list-1 {
     animation-name: appear;
-    animation-duration: 3.25s;
+    animation-duration: 2.25s;
     animation-fill-mode: backwards;
     animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
@@ -1224,7 +1299,7 @@ footer {
 }
 .Desserts-menu .Desserts-list .list-1 {
     animation-name: appear;
-    animation-duration: 3.5s;
+    animation-duration: 2.5s;
     animation-fill-mode: backwards;
     animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
@@ -1242,6 +1317,8 @@ footer {
 }
 
 /*------------------ span-animation*/
+
+
 .load-anim1,
 .load-anim2 {
   width: 200px;
@@ -1249,20 +1326,19 @@ footer {
   border: 5px solid #cccccc;
   border-radius: 50%;
   animation-name: loadAnim;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
   animation-fill-mode: forwards;
   position: absolute;
-  margin: auto auto;
+  margin: auto auto auto auto;
   left: 0;
-  top: 0;
-  bottom: 0;
+  bottom:100px;
   right: 0;
 }
 .load-anim2 {
   animation-name: loadAnim2;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.35, 0.36, 0.72, 0.72);
